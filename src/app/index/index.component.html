@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.component.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+  <div id="app" class="">
+    <div #header id="header" class="row container-fruid">
+        <div class="nav_ col-md-8">
+            <div class="row">
+                <div class="col-md-2 p-0"><a href="#home">Home</a></div>
+                <div class="col-md-2 p-0"><a href="#about">About</a></div>
+                <div class="col-md-2 p-0"><a href="#action">Action</a></div>
+                <div class="col-md-2 p-0"><a href="#contact">Contact</a></div>
+                <div class="col-md-2 p-0 nav-down">
+                  <a (click)="preventDefault($event)" href="#">More <i class="fa-regular fa-angle-down"></i></a>
+                  <ul class="subnav">
+                    <li class=""><a href="">Nothing</a></li>
+                    <li class=""><a href="">To</a></li>
+                    <li class=""><a href="">Say</a></li>
+                  </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="right-btn">
+          <button class="search-btn"><i class="fa fa-search"></i></button>
+          <button  class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div id="bodyr">
+      <div class="slider">
+        <div #sliderImg [class.hide]="slidi != 1" class="slider-img">
+          <img src="assets/img/slider/pic5.jpg" alt="">
+          <h2>Anh so 1</h2>
+          <h3>tieu de anh so 1</h3>
+
+        </div>
+        <div #sliderImg [class.hide]="slidi != 2" class="slider-img">
+          <img src="assets/img/slider/pic8.jpg" alt="">
+          <h2>Anh so 2</h2>
+          <h3>tieu de anh so 2</h3>
+        </div>
+        <div #sliderImg [class.hide]="slidi != 3" class="slider-img">
+          <img src="assets/img/slider/pic9.jpg" alt="">
+          <h2>Anh so 3</h2>
+          <h3>tieu de anh so 3</h3>
+
+        </div>
+        <i (click)="slidiplus(-1)" class="fa-light fa-angle-left"></i>
+        <i (click)="slidiplus(+1)" class="fa-light fa-angle-right"></i>
+      </div>
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+  </div>
+
+</body>
+
+</html>
